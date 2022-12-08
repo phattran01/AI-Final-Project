@@ -41,7 +41,7 @@ def result():
     print("X=%s, Predicted=%s" % (df.to_numpy, y_pred[:,1]))
 
     #return the results to your predict screen
-    return render_template('predict.html', prediction=y_pred[:,1])
+    return render_template('index.html', prediction=y_pred[:,1])
 
 if __name__ == '__main__':
     init()
