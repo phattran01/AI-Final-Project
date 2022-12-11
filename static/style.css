@@ -45,6 +45,9 @@ input[type=text] {
     font-size: 30px;
 }
 
+select {
+    font-size: 30px;
+}
 input[type=radio] {
     border: 0px;
     width:30px;
