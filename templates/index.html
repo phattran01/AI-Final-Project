@@ -24,7 +24,7 @@
                     <input class="form-control" type="radio" id="gender" name="gender" value="Female">Female<br>
                 </div>
             </div>
-
+            
             <div id="question-section-2">
                 <label for = "age">Age</label>
                 <br>
@@ -170,14 +170,16 @@
             <div id="question-section-2">
                 <label for = "avg_glucose_level">Average Glucose Level</label>
                 <br>
-                <input class="form-control" type="text" id="avg_glucose_level" name="avg_glucose_level" size="10">
+                <br>
+                50<input class="form-control" type="range" id="avg_glucose_level" name="avg_glucose_level" min="0" max="3894" value="1800" step="1" style="height: 30px;">300
                 <br>
             </div>
 
             <div id="question-section-1">
                 <label for = "bmi">Body Mass Index</label>
                 <br>
-                <input class="form-control" type="text" id="bmi" name="bmi" size="10">
+                <br class="small">
+                13<input class="form-control" type="range" id="bmi" name="bmi" min="0" max="341" value="170" step="1" style="height: 30px;">50
                 <br>
             </div>
 
@@ -214,9 +216,15 @@
                     });
                 });
             });
+
+            const rangeInput = document.getElementById('range');
+            const hiddenInput = document.getElementById('selected-value');
+
+            // Add an event listener for the input event
+            rangeInput.addEventListener('input', () => {
+                const value = rangeInput.value;
+                hiddenInput.value = value;
+            });
         </script>
     </body>
-    
-    
-    
 </html>
